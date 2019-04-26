@@ -1,0 +1,168 @@
+
+<html>
+<head>
+<title>Portfolio</title>
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body >
+<div style="background-image:url('back.jpg'); background-repeat: no-repeat;background-size: cover;"> 
+ 
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+     
+      <div id="logo" class="flex float-left">
+        <h1><a href="index.html">Portfolio</a></h1>
+      </div>
+      <nav id="mainav" class="float-right">
+    
+            <ul>
+             
+          
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    
+    </header>
+  </div>
+  <section id="pageintro" style="color: white">
+    <div style="background-color: white;color:black;padding: 10px;width: 400px; ">
+ 
+<h1>sign up</h1>
+<hr color="red">
+<form  action="regRequest.jsp" method="post" onsubmit="return ValidateForm()" >
+    <span id="error" style="color: red;"></span>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input  type="text" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
+    
+  </div>
+  <div class="form-group" >
+    <label for="exampleInputPassword1">Password</label>
+    <input  type="password" class="form-control" id="exampleInputPassword1" name="pass" placeholder="Enter New Password">
+  </div>
+ 
+  <button type="submit" class="btn btn-success">Sign Up</button>
+
+</form>
+<a href="signin.html">Already Have an Account?</a>
+<script>
+    function ValidateForm()
+    {
+        var email = document.getElementById("exampleInputEmail1");
+        var pass = document.getElementById("exampleInputPassword1");
+        var span =  document.getElementById("error");
+          if(email.value === "")
+          { 
+            //  window.alert("Please enter a valid e-mail address."); 
+            span.innerHTML = "Enter Email";
+             email.focus(); 
+          return false; 
+          } 
+   
+    if(email.value.indexOf("@", 0) < 0)                 
+    { 
+      //  window.alert("Please enter a valid e-mail address."); 
+       span.innerHTML = "Please enter a valid e-mail address.";
+       email.focus(); 
+    return false; 
+    } 
+   
+    if(email.value.indexOf(".", 0) < 0)                 
+   { 
+        span.innerHTML = "Please enter a valid e-mail address.";
+       // window.alert("Please enter a valid e-mail address."); 
+       email.focus(); 
+      return false; 
+       } 
+    if(pass.value === "")                        
+    { 
+         span.innerHTML = "Please enter your password";
+       // window.alert("Please enter your password"); 
+      pass.focus(); 
+       return false; 
+    } 
+    else if(pass.value.length<8)                        
+    { 
+         span.innerHTML = "Password Length can't be less than 8.";
+      pass.focus(); 
+       return false; 
+    } 
+     return true;
+        
+   }
+    
+
+    </script>
+</div>
+  </section>
+</div>
+
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <div style="text-align: center;padding-bottom: 20px;"><h3 >Features</h3>  
+    </div>
+    <div class="card-group text-success">
+  <div class="card " style="width: 18rem;">
+  <a href="#"><i class="fa fa-3x fa-500px"></i></a>
+  <div class="card-body">
+    <h5 class="card-title">RESUME</h5>
+    <p class="card-text">From all the details you provide, there will create a resume as per SGSITS guidelines automatically.</p>
+    
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="#"><i class="fa fa-3x fa-lastfm"></i></a>
+  <div class="card-body">
+    <h5 class="card-title">EDIT ANYTIME</h5>
+    <p class="card-text">No data is fix, you can edit your portfolio whenever you want.</p>
+   
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="#"><i class="fa fa-3x fa-puzzle-piece"></i></a>
+  <div class="card-body">
+    <h5 class="card-title">PUBLISH</h5>
+    <p class="card-text">You can manage publish setting for your portfolio. If you dont want to make it public, change the setting.</p>
+    
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="#"><i class="fa fa-3x  fa-ravelry"></i></a>
+  <div class="card-body">
+    <h5 class="card-title">SAY NO TO PAPER</h5>
+    <p class="card-text">Get a link to your portfolio and give it to recruiter. No need to carry documents with you.</p>
+    
+  </div>
+</div>
+</div>
+
+  
+      <div class="clear"></div>
+  </section>
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="clear"></div>
+  </main>
+</div>
+
+<div style="background-color: #4e7f19;line-height:100px;text-align: center;">  
+   
+      <p>Developed by Aditya & Neelam</p>    
+  
+</div>
+ 
+
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
